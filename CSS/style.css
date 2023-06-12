@@ -1,0 +1,735 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+
+:root {
+    --blue: rgb(29, 161, 242);
+    --red: rgb(128, 0, 32);
+    --green: rgb(60, 179, 113);
+    --black: rgb(20, 23, 26);
+    --dark-grey: rgb(101, 119, 134);
+    --light-grey: rgba(255, 255, 255, 0.9);
+    --lighter-grey: rgb(225, 237, 237);
+    --lightest-grey: rgb(245, 248, 250);
+    --light-opacity: rgba(255, 255, 255, 0.1);
+    --dark-opacity: rgba(255, 255, 255, 0.4);
+    --darker-opacity: rgba(255, 255, 255, 0.3);
+    --border-opacity: rgba(255, 255, 255, 0.2);
+    --blue-hover: rgba(29, 161, 242, 0.1);
+    --red-hover: rgba(128, 0, 32, 0.1);
+    --green-hover: rgb(60, 179, 113, 0.1);
+    --trend-container-hover: rgba(104, 104, 104, 0.1);
+    --container-hover: rgba(104, 104, 104, 0.1)
+}
+
+
+
+
+
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: rgb(0, 0, 0);
+    color: var(--light-grey);
+}
+
+/* Utilities */
+.light {
+    color: var(--light-grey);
+}
+
+.dark {
+    color: var(--dark-opacity)
+}
+
+.blue {
+    color: var(--blue);
+}
+
+.bold {
+    font-weight: 700;
+}
+
+.text-underline:hover {
+    text-decoration: underline;
+}
+
+.border-bottom {
+    border-bottom: 1px solid var(--border-opacity);
+}
+
+.border-bottom:hover {
+    background: var(--container-hover);
+    transition: .4s ease;
+}
+
+.trends {
+    cursor: pointer;
+}
+
+.trends:hover {
+    background: var(--trend-container-hover);
+    transition: .4s ease;
+}
+
+/* Main-Container */
+.main-container {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-shrink: 0;
+}
+
+/* Container-1 */
+.container-1 {
+    width: 14.5%;
+    height: 500vh;
+    border-right: 1px solid var(--border-opacity);
+}
+
+.nav-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    position: fixed;
+    width: 14%;
+    height: 1000vh;
+    top: 0px;
+}
+
+.nav-icons i.bird {
+    font-size: 27px;
+}
+
+.nav-icons i {
+    margin-bottom: px;
+    padding: 15px;
+    font-size: 25px;
+    margin-right: 9px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.nav-icons i:hover {
+    background: var(--light-opacity);
+    border-radius: 50%;
+}
+
+.nav-icons .material-icons {
+    margin-bottom: 2px;
+    padding: 10px;
+    margin-right: 11px;
+    cursor: pointer;
+    transition: .4s ease;
+}
+
+.nav-icons .material-icons:hover {
+    background: var(--light-opacity);
+    border-radius: 50%;
+}
+
+.nav-icons img.tweet-button {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: .4s ease;
+}
+
+/* .nav-icons img.twitter-blue {
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    margin-right: 9px;
+    z-index: 5;
+} */
+
+.nav-icons img.tweet-button:hover {
+    opacity: 0.9;
+    border: radius 50%;
+}
+
+.nav-icons img.my-avi {
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.image-container {
+    margin-top: 65px;
+    margin-right: 5px;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    border-radius: 50%;
+    transition: .4s ease;
+}
+
+.image-container:hover {
+    background: var(--light-opacity);
+}
+
+
+/* Container-2 */
+.container-2 {
+    width: 55%;
+    height: 500vh;
+    border-right: 1px solid var(--border-opacity);
+}
+
+.home-container {
+    position: fixed;
+    top: 0;
+    width: 47%;
+    background: black;
+    z-index: 1;
+    border-right: solid 1px var(--border-opacity);
+}
+
+.container-2 h3 {
+    margin-top: 15px;
+    margin-left: 15px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.home-container nav {
+    display: flex;
+    list-style: none;
+    /* justify-content: space-around; */
+    border-bottom: 1px solid var(--border-opacity);
+    cursor: pointer;
+}
+
+.home-container nav .light {
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.for-you {
+    width: 50%;
+    text-align: center;
+}
+
+
+nav p {
+    padding: 15px 20px;
+}
+
+/* .for-you p {
+    border-bottom: 5px solid var(--blue);
+} */
+
+.for-you:hover {
+    background: var(--light-opacity);
+    transition: .4s ease;
+}
+
+.following {
+    width: 50%;
+    /* padding: 15px 20px; */
+    text-align: center;
+}
+
+.following:hover {
+    background: var(--light-opacity);
+    transition: .4s ease;
+}
+
+.my-profile {
+    margin-top: 108px;
+}
+
+.my-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin: 8px 15px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+.my-profile p {
+    font-size: 20px;
+    padding-left: 5px;
+    margin-top: 25px;
+    margin-bottom: 30px;
+}
+
+.profile-flex {
+    display: flex;
+    margin: auto;
+    white-space: nowrap;
+    border-bottom: 1px solid var(--border-opacity);
+}
+
+.content-icons {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+.content-icons button {
+    margin-left: 223px;
+    padding: 9px 15px;
+    background: var(--blue);
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: 700;
+    opacity: 0.5;
+}
+
+.content-icons .blue {
+    /* margin: 5px; */
+    padding: 8px;
+}
+
+
+.content-icons .blue:hover {
+    background: var(--blue-hover);
+    border-radius: 50%;
+    transition: .4s ease;
+
+}
+
+.more-tweet {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Users */
+.display-name img.user-avi {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 8px 15px;
+    margin-right: 10px;
+}
+
+.display-name {
+    display: flex;
+    /* white-space: nowrap; */
+    margin: auto;
+}
+
+.users {
+    position: relative;
+    cursor: pointer;
+}
+
+.user-content {
+    margin-top: 13px;
+    line-height: 20px;
+}
+
+.user-content img {
+    width: 500px;
+    margin-top: 10px;
+    border-radius: 15px;
+    height: 500px;
+}
+
+/* .user-content p.tweet {
+    margin-top: 3px;
+} */
+
+.end {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+    padding: 8px 10px;
+}
+
+.end:hover {
+    background: var(--blue-hover);
+    border-radius: 50%;
+    /* transition: .4s ease; */
+}
+
+.like-retweet-buttons {
+    width: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 5px;
+}
+
+.like-retweet-buttons p {
+    font-size: 14px;
+}
+
+.like-retweet-buttons i {
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 50%;
+}
+
+.like-retweet-buttons i.last {
+    padding: 16px 10px;
+}
+
+.hover-blue:hover i {
+    color: var(--blue);
+    background: var(--blue-hover);
+}
+
+.hover-blue:hover {
+    color: var(--blue);
+}
+
+.hover-green:hover i {
+    color: var(--green);
+    background: var(--green-hover);
+}
+
+.hover-green:hover {
+    color: var(--green);
+}
+
+.hover-red:hover i {
+    color: var(--red);
+    background: var(--red-hover);
+}
+
+.hover-red:hover {
+    color: var(--red);
+}
+
+/* Tweet two-Quoted */
+.quoted-tweet {
+    width: 500px;
+    margin-top: 10px;
+    border-radius: 15px;
+    border: 1px solid var(--border-opacity);
+    height: fit-content;
+    padding: 5px 10px;
+}
+
+.quoted-tweet img {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+}
+
+.quoted-flex {
+    display: flex;
+    margin-bottom: 3px;
+}
+
+.quoted-flex img {
+    margin-right: 3px;
+}
+
+.quoted-flex p {
+    align-self: center;
+    margin-top: 7px;
+    margin-right: 3px;
+}
+
+.paragraph-1 {
+    margin-top: 20px;
+}
+
+.user-content.verified .promoted {
+    display: flex;
+    align-items: center;
+    position: absolute;
+    bottom: 10px;
+    left: 70px;
+    font-size: 14px;
+}
+
+.promotion-space {
+    margin-bottom: 40px;
+}
+
+.user-content.verified p {
+    display: flex;
+    align-items: center;
+}
+
+.badge .metro {
+    display: flex;
+    align-items: center;
+}
+
+.badge .metro span {
+    margin-right: 3px;
+}
+
+.user-content.verified p span {
+    margin-right: 3px;
+}
+
+.user-content.verified p span.material-icons {
+    margin-right: 5px;
+}
+
+.promotion .verified img {
+    height: 300px;
+}
+
+
+
+/* .quoted-flex p {
+    width: 150px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+} For responsiveness */
+
+
+
+
+
+/* .profile {
+    display: flex;
+    flex-direction: column;
+} */
+
+
+
+
+/* Container-3 */
+
+.container-3 {
+    width: 45%;
+    height: 500vh;
+    border-right: 1px solid var(--border-opacity);
+    padding-left: 30px;
+    padding-right: 100px;
+    position: relative;
+    /* white-space: nowrap; */
+}
+
+.trends-container input {
+    width: 100%;
+    height: 40px;
+    border: none;
+    background-color: var(--black);
+    border-radius: 30px;
+    padding: 10px 60px;
+    margin-top: 5px;
+}
+
+::placeholder {
+    color: var(--dark-opacity);
+    font-size: 16px;
+}
+
+.input {
+    position: relative;
+}
+
+.trends-container .input span {
+    position: absolute;
+    top: 14px;
+    left: 20px;
+    color: var(--dark-opacity);
+}
+
+.trends-container input:focus {
+    outline: 1px solid;
+    outline-color: var(--blue);
+}
+
+.trends-for-you {
+    margin-top: 60px;
+}
+
+.trends-container.trending {
+    width: 100%;
+    border: none;
+    background-color: var(--black);
+    border-radius: 15px 15px 0 0;
+    margin-top: 15px;
+}
+
+.trends {
+    padding: 15px;
+    position: relative;
+    white-space: wrap;
+}
+
+.trends h3 {
+    font-size: 20px;
+}
+
+.trends .dark.tiny {
+    font-size: 14px;
+}
+
+.trends .fa-elipsis {
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.trends .promoted {
+    display: flex;
+    font-size: 14px;
+}
+
+.abeg-nau {
+    display: flex;
+    width: 85.5%;
+    height: 500vh;
+}
+
+.trending-topics.follow-suggest {
+    background: var(--black);
+    margin-top: 20px;
+    border-radius: 15px;
+}
+
+.follow-suggest img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 20px;
+}
+
+.trending-topics.follow-suggest .trends {
+    display: flex;
+    align-items: center;
+}
+
+.trends.to-follow {
+    padding: 15px;
+}
+
+.trends-to-follow {
+    padding: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+}
+
+.trends .button {
+    padding: 8px 15px;
+    background: var(--lighter-grey);
+    color: var(--black);
+    font-weight: 600;
+    border-radius: 30px;
+    margin-left: 70px;
+    position: absolute;
+    top: 22px;
+    right: 15px;
+}
+
+.trends .button:hover {
+    opacity: 0.7;
+    transition: 0.4s ease;
+}
+
+/* .trends.show-more {
+    padding: 20px;
+    background-color: var(--black);
+} */
+
+.trends.show-more:hover {
+    background: var(--trend-container-hover);
+}
+
+.trends.show-more-1 {
+    padding: 10px;
+}
+
+.follow-suggest {
+    position: sticky;
+    top: 125px;
+    position: -webkit-sticky
+}
+
+footer {
+    padding: 15px;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 458px;
+}
+
+footer p {
+    font-size: 14px;
+    line-height: 20px;
+}
+
+footer .text-underline {
+    cursor: pointer;
+}
+
+.spacing {
+    margin-right: 10px;
+}
+
+.left-spacing {
+    margin-left: 10px;
+}
+
+.trends-container.search-bar {
+    height: 50px;
+    position: fixed;
+    top: 0;
+    width: 28%;
+    background: black;
+    z-index: 1;
+}
+
+.sticky.show-more {
+    position: sticky;
+    top: 50px;
+    background: var(--black);
+    border-radius: 0 0 15px 15px;
+    position: -webkit-sticky;
+}
+
+.message {
+    height: 60px;
+    width: 30%;
+    border-top: 1px solid var(--border-opacity);
+    border-left: 1px solid var(--border-opacity);
+    border-right: 1px solid var(--border-opacity);
+    position: fixed;
+    bottom: 0;
+    right: 20px;
+    z-index: 5;
+    background: black;
+    border-radius: 15px 15px 0 0;
+    margin-top: 20px;
+    padding: 0 20px;
+    box-shadow: 1px 1px 5px var(--dark-grey), -1px -1px 5px var(--dark-grey);
+    cursor: pointer;
+}
+
+.message h3 {
+    font-size: 20px;
+}
+
+.message-flex {
+    display: flex;
+    margin-top: 20px;
+    white-space: nowrap;
+    justify-content: space-between;
+}
+
+.message-flex .light.left {
+    margin-left: 15px;
+}
+
+/* .for-you {
+    margin-top: 50px already used a class like this earlier with same properties;
+} */
